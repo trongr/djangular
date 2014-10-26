@@ -1,9 +1,8 @@
 __author__ = 'trng'
-#To change this template use Tools | Templates.
 
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-
+from models import Post
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -16,7 +15,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
         model = Group
         fields = ('url', 'name')
         
-    s GroupSerializer(serializers.HyperlinkedModelSerializer):
+class PostSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Group
-        fields = ('url', 'name')
+        model = Post
+        fields = ('text', 'author', "created")
