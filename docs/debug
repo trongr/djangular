@@ -1,0 +1,1 @@
+TABLE DOESN'T EXIST. you'll need to do ./manage.py migrate. if it says no migrations to apply, and it's the first model you're adding to the project, chances are you haven't included your app in INSTALLED_APPS in settings.py. you'll probably also need to specify the full path from the project root, e.g. "tutorila.quickstart"
