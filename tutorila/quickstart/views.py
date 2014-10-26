@@ -1,8 +1,8 @@
 from django.shortcuts import render
-
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from serializers import UserSerializer, GroupSerializer
+# PostSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -19,3 +19,7 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+    
+# class PostViewSet(viewsets.ModelViewSet):
+#     queryset = Post.objects.all()
+#     serializer_class = PostSerializer
