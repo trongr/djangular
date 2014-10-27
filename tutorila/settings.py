@@ -91,4 +91,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/' # points to 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "tutorila", "static"), # 
+#     '/var/www/static/', # TODO try putting a CDN here
+)
+
+# BASE_DIR is the root of the project: the one that contains tutorila/quickstart/static, .git, manage.py among others
+TEMPLATE_DIRS = ( 
+    os.path.join(BASE_DIR, "tutorila", "quickstart", "static"), 
+)
