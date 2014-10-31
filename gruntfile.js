@@ -7,13 +7,12 @@ module.exports = function(grunt) {
       },
       all: [
         'gruntfile.js',
-        'quickstart/static/**/*.js'
+        'tutorila/quickstart/static/**/*.js'
       ]
     },
 
   });
 
-
-//   grunt.registerTask('default', []);
+  grunt.registerTask('default', ["jshint"]);
 
 };
