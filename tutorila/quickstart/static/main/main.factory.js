@@ -9,6 +9,10 @@ angular.module('djangular').factory('posts', ['$http', function($http) {
             url: url,
         })     
     }
+    
+    posts.post = function(){
+        
+    }
         
     return posts;
 }]);
