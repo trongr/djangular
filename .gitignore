@@ -1,3 +1,5 @@
+########################################## DJANGO
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -43,3 +45,7 @@ coverage.xml
 docs/_build/
 # PyBuilder
 target/
+
+########################################## DEV
+
+node_modules/

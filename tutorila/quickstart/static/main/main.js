@@ -1,5 +1,6 @@
 angular.module('djangular')
   .controller('MainCtrl', ["$scope", "posts", function ($scope, posts) {
+        $scope.posts = []
         posts.get().success(function(data, status, headers, config){
             $scope.posts = data.results
         }).error(function(data, status, headers, config){
