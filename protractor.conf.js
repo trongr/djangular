@@ -1,14 +1,15 @@
 exports.config = {
     //     seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ['e2e/**/*.spec.js'],
+    specs: ['tutorila/test/e2e/**/*.spec.js'],
     baseUrl: 'http://localhost:8000',
-    capabilities: {
-        browserName: 'chrome',
-        // browserName: 'firefox',
-        // browserName: 'phantomjs',
-        // 'phantomjs.binary.path': require('phantomjs').path,
-
-    },
+    // holy smokes. this is the one you want to use, not the one that
+    // comes with protractor:
+    chromeDriver: "node_modules/chromedriver/bin/chromedriver",
+    multiCapabilities: [
+        {'browserName': 'firefox'},
+        {'browserName': 'phantomjs'},
+        {browserName: "chrome"}
+    ],
     rootElement: 'body', // change if ng-app isn't in body
     // The timeout for each script run on the browser. This should be longer
     // than the maximum time your application needs to stabilize between tasks.

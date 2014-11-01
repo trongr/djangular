@@ -1,7 +1,6 @@
 var k = {
-    karmaconf: 'tutorila/test/karma.unit.conf.js',
-    karmae2econf: 'tutorila/test/karma.e2e.conf.js',
-    protractorconf: "tutorila/test/protractor.conf.js",
+    karmaconf: 'karma.unit.conf.js',
+    protractorconf: "protractor.conf.js",
 }
 
 module.exports = function(grunt) {

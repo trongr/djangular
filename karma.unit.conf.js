@@ -3,16 +3,16 @@
 
 module.exports = function(config) {
     config.set({
-        basePath: '../',
+        basePath: '.',
         frameworks: ['jasmine'],
         files: [
-            "static/bower_components/angular/angular.js",
-            'static/bower_components/angular-route/angular-route.js',
-            'static/bower_components/angular-mocks/angular-mocks.js',
-            "quickstart/static/index.js",
-            "quickstart/static/main/main.js",
-            "quickstart/static/main/main.factory.js",
-            'test/unit/**/*.spec.js',
+            "tutorila/static/bower_components/angular/angular.js",
+            'tutorila/static/bower_components/angular-route/angular-route.js',
+            'tutorila/static/bower_components/angular-mocks/angular-mocks.js',
+            "tutorila/quickstart/static/index.js",
+            "tutorila/quickstart/static/main/main.js",
+            "tutorila/quickstart/static/main/main.factory.js",
+            'tutorila/test/unit/**/*.spec.js',
         ],
         exclude: [],
         preprocessors: {},
