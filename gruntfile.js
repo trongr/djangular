@@ -19,11 +19,6 @@ module.exports = function(grunt) {
                 autoWatch: false,
                 singleRun: true
             },
-//             e2e: {
-//                 configFile: k.karmae2econf,
-//                 autoWatch: false,
-//                 singleRun: true
-//             },
             watch: {
                 configFile: k.karmaconf,
                 autoWatch: true,
@@ -36,11 +31,24 @@ module.exports = function(grunt) {
                 configFile: k.protractorconf,
             },
             run: {}
-        }
+        },
+        shell: {
+            django: {
+                command: 'python manage.py runserver 0.0.0.0:8000',
+                options: {
+                    stdout: true,
+                    stderr: true,
+                    stdin: true,
+                    // async: true,
+                }
+            }
+        },
     });
 
     grunt.registerTask('default', ["jshint"]);
     grunt.registerTask('test', ["karma:unit"]);
     grunt.registerTask('e2e', ["protractor:run"]);
     grunt.registerTask("watch", ["karma:watch"])
+    grunt.registerTask("serve", ["shell:django"])
+
 };

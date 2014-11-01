@@ -3,7 +3,9 @@ exports.config = {
     specs: ['e2e/**/*.spec.js'],
     baseUrl: 'http://localhost:8000',
     capabilities: {
-        browserName: 'phantomjs',
+        browserName: 'chrome',
+        // browserName: 'firefox',
+        // browserName: 'phantomjs',
         'phantomjs.binary.path': require('phantomjs').path
     },
     rootElement: 'body', // change if ng-app isn't in body
