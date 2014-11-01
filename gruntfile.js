@@ -1,6 +1,7 @@
 var k = {
     karmaconf: 'tutorila/test/karma.unit.conf.js',
     karmae2econf: 'tutorila/test/karma.e2e.conf.js',
+    protractorconf: "tutorila/test/protractor.conf.js",
 }
 
 module.exports = function(grunt) {
@@ -18,21 +19,28 @@ module.exports = function(grunt) {
                 autoWatch: false,
                 singleRun: true
             },
-            e2e: {
-                configFile: k.karmae2econf,
-                autoWatch: false,
-                singleRun: true
-            },
+//             e2e: {
+//                 configFile: k.karmae2econf,
+//                 autoWatch: false,
+//                 singleRun: true
+//             },
             watch: {
                 configFile: k.karmaconf,
                 autoWatch: true,
                 singleRun: false,
             }
+        },
+        protractor: {
+            options: {
+                keepAlive: true,
+                configFile: k.protractorconf,
+            },
+            run: {}
         }
     });
 
     grunt.registerTask('default', ["jshint"]);
     grunt.registerTask('test', ["karma:unit"]);
-    grunt.registerTask('e2e', ["karma:e2e"]);
+    grunt.registerTask('e2e', ["protractor:run"]);
     grunt.registerTask("watch", ["karma:watch"])
 };
