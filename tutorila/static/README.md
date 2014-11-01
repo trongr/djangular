@@ -1,0 +1,1 @@
+app-independent static files, corresponds to STATICFILES_DIRS = (os.path.join(BASE_DIR, "tutorila", "static"),) in settings.py

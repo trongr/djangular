@@ -1,0 +1,26 @@
+{
+  "name": "tutorila",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "node node_modules/protractor/bin/webdriver-manager update"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-karma": "~0.9.0",
+    "grunt-protractor-runner": "~1.1.4",
+    "karma": "~0.12.24",
+    "karma-chrome-launcher": "~0.1.5",
+    "karma-firefox-launcher": "~0.1.3",
+    "karma-jasmine": "~0.1.5",
+    "karma-phantomjs-launcher": "~0.1.4",
+    "matchdep": "~0.3.0",
+    "phantomjs": "^1.9.12",
+    "protractor": "~1.3.1"
+  }
+}
