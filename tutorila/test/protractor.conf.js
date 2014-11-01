@@ -6,17 +6,25 @@ exports.config = {
         browserName: 'chrome',
         // browserName: 'firefox',
         // browserName: 'phantomjs',
-        'phantomjs.binary.path': require('phantomjs').path
+        // 'phantomjs.binary.path': require('phantomjs').path,
+
     },
     rootElement: 'body', // change if ng-app isn't in body
     // The timeout for each script run on the browser. This should be longer
     // than the maximum time your application needs to stabilize between tasks.
-    allScriptsTimeout: 10000,
+    allScriptsTimeout: 60000,
+    getPageTimeout: 60000,
     jasmineNodeOpts: {
         onComplete: function() {},
         isVerbose: true,
         showColors: true,
         includeStackTrace: true,
-        //         defaultTimeoutInterval: 30000
-    }
+        defaultTimeoutInterval: 60000
+    },
+    onPrepare: function(){
+        // TODO DEBUG (might not work). uncomment if you get this
+        // error: Error while waiting for Protractor to sync with the
+        // page:
+        // browser.driver.manage().window().setSize(1600, 800);
+    },
 }

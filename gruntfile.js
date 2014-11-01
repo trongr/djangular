@@ -47,7 +47,21 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', ["jshint"]);
     grunt.registerTask('test', ["karma:unit"]);
-    grunt.registerTask('e2e', ["protractor:run"]);
+
+    grunt.registerTask('test', function(target) {
+        if (target === 'unit') {
+            return grunt.task.run([
+                "karma:unit"
+            ]);
+        } else if (target === 'e2e') {
+            return grunt.task.run([
+                "protractor:run"
+            ]);
+        } else grunt.task.run([
+            'test:unit'
+        ]);
+    });
+
     grunt.registerTask("watch", ["karma:watch"])
     grunt.registerTask("serve", ["shell:django"])
 
