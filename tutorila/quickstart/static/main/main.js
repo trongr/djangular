@@ -15,9 +15,9 @@ angular.module('djangular').controller('MainCtrl', ["$scope", "posts",
         })
         
         $scope.addpost = function(){
-            var newpost = $scope.newpost
+            var author = "admin"
+            $scope.posts.push({text:$scope.newpost, author:author, created:new Date()})           
             $scope.newpost = ""
-            $scope.posts.push(newpost)
         }
     }
 ]);

@@ -12,7 +12,7 @@ module.exports = function(config) {
             "quickstart/static/index.js",
             "quickstart/static/main/main.js",
             "quickstart/static/main/main.factory.js",
-            'test/**/*.spec.js',
+            'test/unit/**/*.spec.js',
         ],
         exclude: [],
         preprocessors: {},
